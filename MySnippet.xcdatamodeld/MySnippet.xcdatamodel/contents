@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TblSnippets" syncable="YES">
+        <attribute name="snippetContent" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="snippetDescription" optional="YES" attributeType="String" defaultValueString="Enter description" syncable="YES"/>
+        <attribute name="snippetTitle" optional="YES" attributeType="String" defaultValueString="Snippet title" syncable="YES"/>
+        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TblType" inverseName="relationship" inverseEntity="TblType" syncable="YES"/>
+    </entity>
+    <entity name="TblType" syncable="YES">
+        <attribute name="typeTitle" optional="YES" attributeType="String" defaultValueString="Type title" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TblSnippets" inverseName="relationship" inverseEntity="TblSnippets" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TblSnippets" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="TblType" positionX="486" positionY="195" width="128" height="75"/>
+    </elements>
+</model>
